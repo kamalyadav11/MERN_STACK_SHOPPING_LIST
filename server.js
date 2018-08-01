@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 
+const items = require('./routes/api/items');
+
 const app = express();
 
 //Body-Parser Middleware
@@ -20,9 +22,8 @@ mongoose
 mongoose.Promise = global.Promise;
 // var db = mongoose.connection;
 
-app.get('/', (req, res) => {
-  res.send("Hello Express World!");
-});
+//Use Routes
+app.use('/api/items', items);//first argument is the path and second is the file name defined above
 
 app.listen(port, () => {
   console.log("Server is listening on port " + port);

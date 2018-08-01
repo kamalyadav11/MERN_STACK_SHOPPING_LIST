@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.schema;
+const Schema = mongoose.Schema;
 
 //Create Schema
 const ItemSchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: false
   },
   Date: {
     type: Date,
