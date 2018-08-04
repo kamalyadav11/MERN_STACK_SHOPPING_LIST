@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Collapse,
   Navbar,
@@ -8,28 +8,28 @@ import {
   NavItem,
   NavLink,
   Container
-} from 'reactstrap';
+} from "reactstrap";
 
 class AppNavbar extends React.Component {
   state = {
     isOpen: false
-  }
+  };
 
   toggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
-  }
+  };
 
   render() {
     return (
       <div>
-        <Navbar color='light' light expand className='mb-5'>
+        <Navbar color="dark" dark expand className="mb-5">
           <Container>
-            <NavbarBrand href='/'>Shopping List</NavbarBrand>
+            <NavbarBrand href="/">Shopping List</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className='ml-auto' navbar>
+              <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href='https://github.com/kamalyadav11'>
+                  <NavLink href="https://github.com/kamalyadav11">
                     Github
                   </NavLink>
                 </NavItem>

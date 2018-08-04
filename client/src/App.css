@@ -11,7 +11,7 @@
   transition: opacity 1000ms ease-in;
 }
 
-.fade-exit {  
+.fade-exit {
   opacity: 1;
 }
 
